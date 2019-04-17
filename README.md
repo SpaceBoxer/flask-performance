@@ -39,13 +39,15 @@ app.config['METRIC_DSN'] = 'https://metrics.spacebox.fun/v1/collector/c5b35bc078
 
 ```
 
-You can also put **METRIC_DSN** into your project config.py file and use Flask's from_pyfile.
+You can also put **METRIC_DSN** into your project `config.py` file and use Flask's `from_pyfile`.
 
 
-`config.py`
+in your `config.py` file
+
 > METRIC_DSN = 'https://metrics.spacebox.fun/v1/collector/c5b35bc078844a59a15dd506e08f3ae6'
 
-`app.py`
+in your project `app.py` file
+
 > app.from_pyfile('config')
 
 
