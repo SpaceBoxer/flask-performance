@@ -15,7 +15,7 @@ class PerformanceCollector(object):
         if app is None:
             raise Exception('init_app should have app parameter')
 
-        if app.config['METRIC_DSN'] is None or len(app.config['METRIC_DSN'] == 0):
+        if app.config['METRIC_DSN'] is None or len(app.config['METRIC_DSN']) == 0:
             raise Exception('METRIC_DSN was not found in config')
 
         app.api_performance_collector = self
