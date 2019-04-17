@@ -1,3 +1,6 @@
 *.pyc
 *.vscode
 .pytest_cache/
+build/
+dist/
+Flask_performance.egg-info/
