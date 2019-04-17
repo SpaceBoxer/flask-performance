@@ -1,6 +1,6 @@
 ### Flask-Performance
 
-A Flask extension to monitoring every **REAL** api request and collect it's performance in **REAL**-time.
+A Flask extension to monitoring every **REAL** api request and collect it's performance in **REAL**-time.✨ 🍰 ✨
 
 
 #### 1、Install by pip
