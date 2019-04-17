@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="Flask-Performance",
-    version="0.0.4",
+    version="0.0.5",
     author="Spacebox(盒子空间) Team",
     author_email="spacebox@spacebox.fun",
     description="A Flask extension to monitoring every REAL api request and collect it's performance in REAL-time.",
