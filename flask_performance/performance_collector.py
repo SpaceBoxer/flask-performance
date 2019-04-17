@@ -41,7 +41,7 @@ class PerformanceCollector(object):
             requests.post(
                 url='{}'.format(self.app.config['METRIC_DSN']),
                 json=doc,
-                timeout=1
+                timeout=0.5
             )
         except:
             pass

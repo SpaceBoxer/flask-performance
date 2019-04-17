@@ -26,16 +26,16 @@ from flask import Flask
 from flask_performance import PerformanceCollector
 
 app = Flask(__name__)
+app.config['METRIC_DSN'] = 'https://metrics.spacebox.fun/v1/collector/c5b35bc078844a59a15dd506e08f3ae6'
 
 pc = PerformanceCollector(app)
-app.config['METRIC_DSN'] = 'https://metrics.spacebox.fun/v1/collector/c5b35bc078844a59a15dd506e08f3ae6'
 
 # or by init_app() when you use factory pattern to creat flask app
 app = create_app()
+app.config['METRIC_DSN'] = 'https://metrics.spacebox.fun/v1/collector/c5b35bc078844a59a15dd506e08f3ae6'
 
 pc = PerformanceCollector()
 pc.init_app(app)
-app.config['METRIC_DSN'] = 'https://metrics.spacebox.fun/v1/collector/c5b35bc078844a59a15dd506e08f3ae6'
 
 ```
 
@@ -51,4 +51,15 @@ in your project `app.py` file
 > app.from_pyfile('config')
 
 
-**And, That's all**, just go to your https://status.spacebox.fun platform to check your project all API performance in real-time.
+**And, That's ALL**, just go to your https://status.spacebox.fun platform to check your project all API performance in real-time.
+
+
+#### 4、Performance problem
+
+Chance is that you will ask: Will this performance collector affect your project's performance ?
+
+the short answer is: yes.
+
+**BUT**, the affects is limit maximus to `500ms`. We set the timeout to `500ms` when send the performance data to the API.
+
+And we implemented this API in a asynchronous way, which means when we receive your project performance data every time we will response immediately and throw the save performance data task to a task queue (which is Celery). In most case, the API will reponse under 100ms.
