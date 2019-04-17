@@ -2,7 +2,7 @@ import time
 from datetime import datetime
 
 import requests
-from flask import request
+from flask import request, g
 
 
 class PerformanceCollector(object):
@@ -24,11 +24,11 @@ class PerformanceCollector(object):
         self.app = app
 
     def _before_request(self):
-        self.app.g.start_time = time.time()
+        g.start_time = time.time()
         
 
     def _after_request(self, response):
-        time_used = time.time() - self.app.g.start_time
+        time_used = time.time() - g.start_time
         doc = {
             "time_used": time_used,
             "created_at": str(datetime.utcnow()),
