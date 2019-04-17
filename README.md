@@ -56,12 +56,12 @@ in your project `app.py` file
 > app.from_pyfile('config')
 
 
-**And, That's ALL**, just go to your https://status.spacebox.fun platform to check your project all API performance in real-time.
+**And, That's ALL**, just go to your https://status.spacebox.fun platform to check your project all API performance stats data in real-time.
 
 
 #### 4、Performance problem
 
-Chance is that you will ask: Will this performance collector affect your project's performance ?
+Chance is that you will ask: Will this performance collector affect my project's performance ?
 
 the short answer is: yes.
 
