@@ -63,3 +63,8 @@ the short answer is: yes.
 **BUT**, the affects is limit maximus to `500ms`. We set the timeout to `500ms` when send the performance data to the API.
 
 And we implemented this API in a asynchronous way, which means when we receive your project performance data every time we will response immediately and throw the save performance data task to a task queue (which is Celery). In most case, the API will reponse under 100ms.
+
+
+#### 5、OK，we know you are curious about how it works, here it is
+
+![How It Works](docs/images/how-it-works.png)
