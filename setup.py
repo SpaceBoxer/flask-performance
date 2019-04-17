@@ -16,7 +16,7 @@ setuptools.setup(
     install_requires=[
         'flask',
         'requests'
-    ]
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
