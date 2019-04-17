@@ -3,6 +3,11 @@
 A Flask extension to monitoring every **REAL** api request and collect it's performance in **REAL**-time.✨ 🍰 ✨
 
 
+The world is powered by APIs. But how API works, are they work as expected? are they handle request fast enough? we don't know actually at most time.
+
+That's why we need a more deeper monitor about APIs. And here we are to solve this prolem.
+
+
 #### 1、Install by pip
 
 > pip install flask-performance
