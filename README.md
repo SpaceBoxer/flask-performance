@@ -18,7 +18,7 @@ e.g.
 > https://metrics.spacebox.fun/v1/collector/c5b35bc078844a59a15dd506e08f3ae6
 
 
-#### Setup & configuration in your Flask project
+#### 3、Setup & configuration in your Flask project
 
 ```python
 
@@ -39,13 +39,14 @@ app.config['METRIC_DSN'] = 'https://metrics.spacebox.fun/v1/collector/c5b35bc078
 
 ```
 
+You can also put **METRIC_DSN** into your project config.py file and use Flask's from_pyfile.
+
+
 `config.py`
 > METRIC_DSN = 'https://metrics.spacebox.fun/v1/collector/c5b35bc078844a59a15dd506e08f3ae6'
 
 `app.py`
 > app.from_pyfile('config')
-
-You can also put **METRIC_DSN** into your project config.py file and use Flask's from_file
 
 
 **And, That's all**, just go to your https://status.spacebox.fun platform to check your project all API performance in real-time.
