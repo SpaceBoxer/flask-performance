@@ -5,7 +5,8 @@ import requests
 from flask import request
 
 
-class PerformanceSender(object):
+class PerformanceCollector(object):
+
     def __init__(self, app=None):
         if app is not None:
             self.init_app(app)
@@ -17,7 +18,7 @@ class PerformanceSender(object):
         if app.config['METRIC_DSN'] is None or len(app.config['METRIC_DSN'] == 0):
             raise Exception('METRIC_DSN was not found in config')
 
-        app.api_performance_sender = self
+        app.api_performance_collector = self
         app.before_request(self._before_request)
         app.after_request(self._after_request)
         self.app = app
@@ -38,7 +39,7 @@ class PerformanceSender(object):
         }
         try:
             requests.post(
-                url='{}/{}'.format(self.app.config['RECEIVER_HOST'], self.app.config['METRIC_DSN']),
+                url='{}'.format(self.app.config['METRIC_DSN']),
                 json=doc,
                 timeout=1
             )

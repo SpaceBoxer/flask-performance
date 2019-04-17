@@ -1,2 +1,2 @@
 
-from .sender import Sender
+from .performance_collector import PerformanceCollector
