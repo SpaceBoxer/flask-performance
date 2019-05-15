@@ -1,5 +1,8 @@
 ### Flask-Performance
 
+![How It Works](docs/images/how-it-works.gif)
+
+
 A Flask extension to monitoring every **REAL** api request and collect it's performance in **REAL**-time.✨ 🍰 ✨
 
 
